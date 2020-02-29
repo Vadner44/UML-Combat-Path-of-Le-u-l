@@ -1,3 +1,4 @@
+// tslint:disable-next-line: class-name
 interface logInt {
     date: Date;
     message: string;
