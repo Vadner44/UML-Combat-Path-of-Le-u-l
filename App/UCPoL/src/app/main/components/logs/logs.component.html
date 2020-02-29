@@ -1,2 +1,6 @@
 <div class = "container">
+    <li *ngFor="let log of logs">
+  <span class="badge">{{log.date}}</span> : 
+{{log.message}} {{log.value}} 
+</li>
 </div>
