@@ -13,6 +13,12 @@ import { LogsComponent } from './components/logs/logs.component';
   imports: [
     CommonModule,
     MainRoutingModule
+  ],
+  exports: [
+    BarsComponent,
+     GameComponent,
+      StatsComponent,
+       LogsComponent
   ]
 })
 export class MainModule { }
