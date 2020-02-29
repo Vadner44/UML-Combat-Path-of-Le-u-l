@@ -12,15 +12,15 @@ import { BarsComponent } from '../bars/bars.component';
 
 export class GameComponent implements OnInit {
 
-  bars = new BarsComponent(); 
+  bars = new BarsComponent();
   constructor() {
-    
+
    }
-  
+
   ngOnInit(): void {
-    
+
   }
-  changeHP(amount: number):void{
+  changeHP(amount: number): void {
     this.bars.changeHP(amount);
   }
 
