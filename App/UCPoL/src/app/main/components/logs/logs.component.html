@@ -1,4 +1,11 @@
 <div class = "container">
+  <div class="controls">
+    <button (click)="move(-1,0)" class="left">Left</button>
+    <button (click)="move(0,-1)" class="up">UP</button>
+    <button (click)="move(0,1)" class="down">Down</button>
+    <button (click)="move(1,0)"class="right">Right</button>
+
+  </div>
     <li *ngFor="let log of logs">
   <span class="badge">{{log.date}}</span> : 
 {{log.message}} {{log.value}} 

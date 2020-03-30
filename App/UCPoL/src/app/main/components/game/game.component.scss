@@ -1,8 +1,38 @@
+$x : var(--x);
+$y : var(--y);
 .container{
     width: 70vw;
     height: 73vh;
     border-style: solid;
     border-width: 1px;
     float:left;
-    overflow: hidden;
+    overflow: scroll;
+    background-repeat: no-repeat;
+    background-image: url(../../../../assets/img/env/dom_inside.png);
+}
+.hero{
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    left: $y;
+    top: $x;
+
+}
+#spikes{
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+    background-image: url(../../../../assets/img/env/kolce.png);
+    position: absolute;
+    left:300px;
+    top: 400px;
+}
+#hppot{
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+    background-image: url(../../../../assets/img/env/hppot.png);
+    position: absolute;
+    left: 100px;
+    top:350px;
 }

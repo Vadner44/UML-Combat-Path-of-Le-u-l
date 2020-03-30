@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LOGS } from '../logs/log';
+import {GameComponent} from '../game/game.component';
 @Component({
   selector: 'app-logs',
   templateUrl: './logs.component.html',
@@ -7,6 +8,7 @@ import { LOGS } from '../logs/log';
 })
 export class LogsComponent implements OnInit {
     logs = LOGS;
+    game = new GameComponent();
   constructor() { }
 
   ngOnInit(): void {
@@ -15,7 +17,9 @@ export class LogsComponent implements OnInit {
 
   addLog(newMessage:string,newValue:number){
       this.logs.push({date:new Date(),message:newMessage,value:newValue});
-      console.log("zadzialo sie");
+  }
+  move(newx,newy){
+    this.game.move(newx,newy)
   }
 
 
