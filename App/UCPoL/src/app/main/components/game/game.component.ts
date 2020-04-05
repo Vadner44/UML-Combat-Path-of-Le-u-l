@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BarsComponent } from '../bars/bars.component';
 import { LogsComponent} from '../logs/logs.component';
 import { I18nSelectPipe } from '@angular/common';
-
+import { LOGS } from '../logs/log';
 
 
 @Component({
@@ -13,6 +13,7 @@ import { I18nSelectPipe } from '@angular/common';
 
 
 export class GameComponent implements OnInit {
+  logs = LOGS;
   path = "../../../../assets/img/";
   anims = ["1.png","2.png","3.png","4.png"];
   animwsk = 0;
@@ -31,6 +32,8 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
     document.documentElement.style.setProperty('--y', `${this.y}px`);
     document.documentElement.style.setProperty('--x', `${this.x}px`);
+    document.documentElement.style.setProperty('--vprops', `visible`);
+    document.documentElement.style.setProperty('--vbattle', `hidden`);
 
   }
   
@@ -40,6 +43,8 @@ sleep(ms = 0) {
 }
 
   async move(newy,newx) {
+ 
+    if( ((this.x + (16*newx)) < 420)&&((this.x + (16*newx)) > 55 )&&((this.y + (16*newy)) < 296)&&((this.y + (16*newy)) > -40 ) ){
     for(let i = 0; i < 16; i++){
       this.y+=newy;
       this.x+=newx;
@@ -48,6 +53,7 @@ sleep(ms = 0) {
     
     await this.sleep(20);
     }
+  }
     console.log(this.x+" "+this.y);
     if((this.x >300 && this.x<444)&&(this.y > 220 && this.y<316) ){
       this.changeHP(-20);    }
@@ -57,12 +63,26 @@ sleep(ms = 0) {
   
   changeHP(amount: number): void {
     this.bars.changeHP(amount);
+    if(amount < 0 ){
+    this.addLog("Otrzymałeś obrażeń:",amount);
+    this.battle();
+    }
+    else{
+      this.addLog("wyleczyłeś obrażeń:",amount);
+    }
    /* if( amount > 0 && this.bars.hp < 100){
     this.logs.addLog(this.heal,amount);
     }
     else if (amount < 0 && this.bars.hp > 0){
       this.logs.addLog(this.attack,amount);
     } */
+  }
+  addLog(newMessage:string,newValue:number){
+    this.logs.push({date:new Date(),message:newMessage,value:newValue});
+}
+  battle():void{
+    document.documentElement.style.setProperty('--vprops', `hidden`);
+    document.documentElement.style.setProperty('--vbattle', `visible`);
   }
   
 

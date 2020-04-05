@@ -1,5 +1,7 @@
 $x : var(--x);
 $y : var(--y);
+$vprops : var(--vprops);
+$vbattle : var(--vbattle);
 .container{
     width: 70vw;
     height: 73vh;
@@ -16,6 +18,7 @@ $y : var(--y);
     position: absolute;
     left: $y;
     top: $x;
+    visibility: $vprops;
 
 }
 #spikes{
@@ -26,6 +29,7 @@ $y : var(--y);
     position: absolute;
     left:300px;
     top: 400px;
+    visibility: $vprops;
 }
 #hppot{
     background-size: cover;
@@ -35,4 +39,12 @@ $y : var(--y);
     position: absolute;
     left: 100px;
     top:350px;
+    visibility: $vprops;
+}
+#battle{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+    visibility: $vbattle;
 }
