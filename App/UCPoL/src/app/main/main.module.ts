@@ -5,7 +5,7 @@ import { MainRoutingModule } from './main-routing.module';
 import { BarsComponent } from './components/bars/bars.component';
 import { GameComponent } from './components/game/game.component';
 import { LogsComponent } from './components/logs/logs.component';
-
+import {RegisterComponent} from './components/register/register.component';
 
 @NgModule({
   declarations: [BarsComponent, GameComponent, LogsComponent],
@@ -16,7 +16,7 @@ import { LogsComponent } from './components/logs/logs.component';
   exports: [
     BarsComponent,
      GameComponent,
-
+    RegisterComponent,
        LogsComponent
   ]
 })
