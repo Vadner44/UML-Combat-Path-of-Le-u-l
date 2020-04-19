@@ -4,15 +4,18 @@
 <div id="spikes"></div>
 <div id="hppot"></div>
 <div id="battle">
-  <!--
-  <button (click)="">Attack</button>
-  <button (click)="">Defense</button>
-  <button (click)="">Item</button>
-  <button (click)="">Run</button>
+
+<h1> Walka!</h1>
+<div  *ngIf="!lost&&!won">
+  <button (click)="atk()">Attack</button>
+  <button (click)="def()">Defense</button><br>
+  <button (click)="itm()">Item</button> 
+  <button (click)="run()">Run</button>
+</div>
+  <div #enHp> Przeciwnik ma {{enemyHP}} życia</div>
+  <div *ngIf="lost"><h1>PRZEGRAŁES</h1><button (click)="restart()">Zacznij od nowa</button></div>
+  <div *ngIf="won"><h1>WYGRALES</h1><button (click)="run()">X</button></div>
   
-  
-  
-  -->
- <h1> Walka!</h1>
+
 </div>
 </div>

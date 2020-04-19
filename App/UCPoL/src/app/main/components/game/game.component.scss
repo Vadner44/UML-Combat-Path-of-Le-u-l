@@ -2,6 +2,7 @@ $x : var(--x);
 $y : var(--y);
 $vprops : var(--vprops);
 $vbattle : var(--vbattle);
+$enemy1V : var(--venemy1);
 .container{
     width: 70vw;
     height: 73vh;
@@ -29,7 +30,7 @@ $vbattle : var(--vbattle);
     position: absolute;
     left:300px;
     top: 400px;
-    visibility: $vprops;
+    visibility: $enemy1V;
 }
 #hppot{
     background-size: cover;

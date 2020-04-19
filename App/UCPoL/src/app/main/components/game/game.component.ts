@@ -24,6 +24,12 @@ export class GameComponent implements OnInit {
   //logs = new LogsComponent();
   attack: string = 'Otrzymałeś obrażenia : ';
   heal: string = 'Wyleczyłeś obrażenia : ';
+
+  enemyHP = 100;
+
+  enemy1Beaten = false;
+  won = false;
+  lost = false;
   constructor() {
 
    }
@@ -56,7 +62,12 @@ sleep(ms = 0) {
   }
     console.log(this.x+" "+this.y);
     if((this.x >300 && this.x<444)&&(this.y > 220 && this.y<316) ){
-      this.changeHP(-20);    }
+      if(!this.won) {
+        this.battle();
+        console.log(this.won);
+      }
+      
+    }
     else  if((this.x >232 && this.x<408)&&(this.y > 24 && this.y<174) ){
         this.changeHP(20);    }
   }
@@ -65,7 +76,7 @@ sleep(ms = 0) {
     this.bars.changeHP(amount);
     if(amount < 0 ){
     this.addLog("Otrzymałeś obrażeń:",amount);
-    this.battle();
+    
     }
     else{
       this.addLog("wyleczyłeś obrażeń:",amount);
@@ -83,7 +94,52 @@ sleep(ms = 0) {
   battle():void{
     document.documentElement.style.setProperty('--vprops', `hidden`);
     document.documentElement.style.setProperty('--vbattle', `visible`);
+    document.documentElement.style.setProperty('--venemy1', `hidden`);
+    this.addLog("Rozpoczynasz walke!",null);
   }
-  
+  run():void{
+    document.documentElement.style.setProperty('--vprops', `visible`);
+    document.documentElement.style.setProperty('--vbattle', `hidden`);
+    if(!this.won) document.documentElement.style.setProperty('--venemy1', `visible`);
+    
+    this.enemyHP = 100;
+  }
+  atk():void{
+    this.enemyHP -=20; 
+    this.addLog("Zadajesz przeciwnikowi obrażenia:",20)
+    if(this.enemyHP > 0){
+    this.counter();
+    }
+    else{
+      console.log("zabiles go :O");
+      this.won = true;
+      console.log(this.won);
 
+    }
+  }
+  def():void{
+
+  }
+  itm():void{
+
+  }
+  restart():void{
+    window.location.reload();
+  }
+  counter():void{
+    let option = Math.floor(Math.random() *2);
+    if (option == 1){
+      let dmg = Math.floor(Math.random() * (-10 - (-30))) + (-30);
+      this.addLog("wróg zadaje Ci obrażenia:",dmg);
+      this.changeHP(dmg);
+      if(this.bars.hp <= 0){
+        this.lost = true;
+      }
+    }
+    else if(option == 0){
+      let heal = Math.floor(Math.random() *(10 - (30))) + (30);
+      this.addLog("Wróg leczy się o",heal);
+      this.enemyHP += heal;
+    }
+  }
 }
