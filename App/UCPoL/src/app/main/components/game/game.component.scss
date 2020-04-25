@@ -43,9 +43,75 @@ $enemy1V : var(--venemy1);
     visibility: $vprops;
 }
 #battle{
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../../assets/img/env/tuo.png);
     z-index: 100;
     visibility: $vbattle;
+
 }
+#battle > h1{
+    margin-left: 45%;
+    color: black;
+    text-shadow: 0 0 0.2em white;
+}
+#battle > div:nth-child(2){
+    float: right;
+    margin-top: 2%;
+    margin-right: 8%;
+    color: red;
+    font-size: 20px;
+
+    
+}
+#battle > div:nth-child(3){
+    margin-top: 49%;
+    margin-left: 12%;
+    float: left;
+    font-size: 50px;
+}
+
+#battle > div:nth-child(4){
+    margin-top: 45%;
+    float: left;
+    margin-left: 25%;
+
+
+}
+#battle > div:nth-child(4) > button:nth-child(1){
+    width: 100px;
+    margin-right: 5px;
+    background-color: #ff3333;
+    border-color: red;
+}
+#battle > div:nth-child(4) > button:nth-child(2){
+    width: 100px;
+    background-color: #3385ff;
+    border-color: blue;
+}
+#battle > div:nth-child(4) > button:nth-child(4){
+    width: 100px;
+    margin-right: 5px;
+    margin-top: 5px;
+    background-color: #66ff66;
+    border-color: green;
+}
+#battle > div:nth-child(4) > button:nth-child(5){
+    width: 100px;
+    margin-top: 5px;
+    background-color: #ffe066;
+    border-color: yellow;
+}
+
+#wynik > div{
+    margin-top: -8%;
+    margin-left: -2%;
+    color: white;
+    }
+
+    #wynik > div > button
+    {
+        margin-left: 20%;
+    }
+ 
+    
