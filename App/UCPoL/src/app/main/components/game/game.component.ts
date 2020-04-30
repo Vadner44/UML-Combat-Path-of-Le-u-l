@@ -89,7 +89,7 @@ sleep(ms = 0) {
     } */
   }
   addLog(newMessage:string,newValue:number){
-    this.logs.push({date:new Date(),message:newMessage,value:newValue});
+    this.logs.push({message:newMessage,value:newValue});
 }
   battle():void{
     document.documentElement.style.setProperty('--vprops', `hidden`);

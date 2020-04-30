@@ -16,7 +16,7 @@ export class LogsComponent implements OnInit {
   }
 
   addLog(newMessage:string,newValue:number){
-      this.logs.push({date:new Date(),message:newMessage,value:newValue});
+      this.logs.push({message:newMessage,value:newValue});
   }
   move(newx,newy){
     this.game.move(newx,newy)

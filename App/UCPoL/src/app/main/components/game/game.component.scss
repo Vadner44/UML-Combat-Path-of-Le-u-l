@@ -6,6 +6,8 @@ $enemy1V : var(--venemy1);
 
 
 .container{
+
+    margin-left: 30px;
     width: 70vw;
     height: 73vh;
     border-style: solid;
@@ -14,6 +16,7 @@ $enemy1V : var(--venemy1);
     overflow: scroll;
     background-repeat: no-repeat;
     background-image: url(../../../../assets/img/env/dom_inside.png);
+    background-color: dimgray;
 }
 .hero{
     width: 128px;
@@ -45,11 +48,12 @@ $enemy1V : var(--venemy1);
     visibility: $vprops;
 }
 #battle{
-    width: 100%;
+    width: 101.5%;
     height: 100%;
     background-image: url(../../../../assets/img/env/tuo.png);
     z-index: 100;
     visibility: $vbattle;
+    margin-left: -30px;
 
 }
 #battle > h1{
@@ -67,14 +71,14 @@ $enemy1V : var(--venemy1);
     
 }
 #battle > div:nth-child(3){
-    margin-top: 49%;
-    margin-left: 12%;
+    margin-top: 48%;
+    margin-left: 13%;
     float: left;
     font-size: 50px;
 }
 
 #battle > div:nth-child(4){
-    margin-top: 45%;
+    margin-top: 44.3%;
     float: left;
     margin-left: 25%;
 

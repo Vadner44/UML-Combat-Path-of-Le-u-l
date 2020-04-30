@@ -8,7 +8,7 @@ $hpPrctD : var(--hpPrctd);
     width: 38vw;
     float: right;
     overflow: hidden;
-    background-color: white;
+    background-color: dimgray;
 }
 .circle{
     border: black;
@@ -35,4 +35,11 @@ $hpPrctD : var(--hpPrctd);
     bottom: 0;
     background-image: url(../../../../assets/img/overlay.png);
     pointer-events: none;
+  }
+
+  p{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 86px;
   }
