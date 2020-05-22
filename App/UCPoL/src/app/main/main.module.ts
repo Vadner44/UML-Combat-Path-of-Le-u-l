@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainRoutingModule } from './main-routing.module';
-import { BarsComponent } from './components/bars/bars.component';
 import { GameComponent } from './components/game/game.component';
 import { LogsComponent } from './components/logs/logs.component';
+import { BarsComponent } from './components/bars/bars.component';
 
 
 
 @NgModule({
-  declarations: [BarsComponent, GameComponent, LogsComponent],
+  declarations: [GameComponent, LogsComponent, BarsComponent],
   imports: [
     CommonModule,
     MainRoutingModule
   ],
   exports: [
-    BarsComponent,
      GameComponent,
        LogsComponent,
+        BarsComponent,
   ]
 })
 export class MainModule { }

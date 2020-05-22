@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BarsComponent } from '../bars/bars.component';
 import { LogsComponent} from '../logs/logs.component';
+import { BarsComponent } from '../bars/bars.component';
 import { I18nSelectPipe } from '@angular/common';
 import { LOGS } from '../logs/log';
 

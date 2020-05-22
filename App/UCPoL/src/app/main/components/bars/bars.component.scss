@@ -3,10 +3,15 @@ $hpPrctD : var(--hpPrctd);
 .container{
     border: black;
     border-style: solid;
-    border-width: 1px;
-    height: 94vh;
-    width: 38vw;
+    border-width: 0px;
+    height: 95%;
+    min-height: 95%;
+    max-height: 95%;
+    width: 28%;
+    min-width: 28%;
+    max-width: 28%;
     float: right;
+    margin-left: 1%;
     overflow: hidden;
     background-color: dimgray;
 }
@@ -34,6 +39,7 @@ $hpPrctD : var(--hpPrctd);
     right: 0;
     bottom: 0;
     background-image: url(../../../../assets/img/overlay.png);
+    background-size: cover;
     pointer-events: none;
   }
 

@@ -1,16 +1,17 @@
 .container{
-    width: 70vw;
-    height: 21vh;
+    width: 71%;
+    min-width: 71%;
+    height: 25%;
     border-style: solid;
-    border-width: 1px;
+    border-width: 0px;
     float:left;
     overflow: scroll;
     background-color: dimgray;
 }
 .controls{
-    margin-top: 55px;
+    margin-top: 4%;
     position: fixed;
-    margin-left: 1020px;
+    margin-left: 63%;
 
 }
 
