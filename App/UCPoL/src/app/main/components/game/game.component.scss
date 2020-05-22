@@ -4,7 +4,6 @@ $vprops : var(--vprops);
 $vbattle : var(--vbattle);
 $enemy1V : var(--venemy1);
 
-
 .container{
     margin-left: 2%;
     width: 69%;
@@ -20,6 +19,7 @@ $enemy1V : var(--venemy1);
     background-repeat: no-repeat;
     background-image: url(../../../../assets/img/env/dom_inside.png);
     background-color: dimgray;
+
 }
 
 div.ruch > input{
