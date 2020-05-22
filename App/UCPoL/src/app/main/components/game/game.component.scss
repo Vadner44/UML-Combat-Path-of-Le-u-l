@@ -18,6 +18,7 @@ $enemy1V : var(--venemy1);
     overflow: hidden;
     background-repeat: no-repeat;
     background-image: url(../../../../assets/img/env/dom_inside.png);
+    background-size: 30%;
     background-color: dimgray;
 
 }
@@ -40,8 +41,8 @@ div.ruch > input{
 
 }
 .hero{
-    width: 128px;
-    height: 128px;
+    width: 10%;
+    height: 12%;
     position: absolute;
     left: $y;
     top: $x;
@@ -50,22 +51,23 @@ div.ruch > input{
 }
 #spikes{
 
-    width: 64px;
-    height: 64px;
+    width: 6%;
+    height: 7%;
     background-image: url(../../../../assets/img/env/kolce.png);
+    background-size: 20%;
     position: absolute;
-    left:300px;
-    top: 400px;
+    left:15%;
+    top: 45%;
     visibility: $enemy1V;
 }
 #hppot{
     background-size: cover;
-    width: 64px;
-    height: 64px;
+    width: 3%;
+    height: 7%;
     background-image: url(../../../../assets/img/env/hppot.png);
     position: absolute;
-    left: 100px;
-    top:350px;
+    left:5%;
+    top: 35%;
     visibility: $vprops;
 }
 #battle{
@@ -75,10 +77,9 @@ div.ruch > input{
     background-size: cover;
     z-index: 100;
     visibility: $vbattle;
-    margin-left: -30px;
-
 }
 #battle > h1{
+    font-size: 2vw;
     margin-left: 45%;
     color: black;
     text-shadow: 0 0 0.2em white;
@@ -88,7 +89,7 @@ div.ruch > input{
     margin-top: 2%;
     margin-right: 8%;
     color: red;
-    font-size: 20px;
+    font-size: 1vw;
 
     
 }
@@ -96,37 +97,38 @@ div.ruch > input{
     margin-top: 40%;
     margin-left: 18%;
     float: left;
-    font-size: 50px;
+    font-size: 3vw;
 }
 
 #battle > div:nth-child(4){
     margin-top: 36%;
     float: left;
     margin-left: 26%;
+    font-size: 1vw;
 
 
 }
 #battle > div:nth-child(4) > button:nth-child(1){
-    width: 100px;
-    margin-right: 5px;
+    width: 5vw;
+    // margin-right: 1%;
     background-color: #ff3333;
     border-color: red;
 }
 #battle > div:nth-child(4) > button:nth-child(2){
-    width: 100px;
+    width: 5vw;
     background-color: #3385ff;
     border-color: blue;
 }
 #battle > div:nth-child(4) > button:nth-child(4){
-    width: 100px;
-    margin-right: 5px;
-    margin-top: 5px;
+    width: 5vw;
+    // margin-right: 1%;
+    margin-top: 1%;
     background-color: #66ff66;
     border-color: green;
 }
 #battle > div:nth-child(4) > button:nth-child(5){
-    width: 100px;
-    margin-top: 5px;
+    width: 5vw;
+    margin-top: 1%;
     background-color: #ffe066;
     border-color: yellow;
 }

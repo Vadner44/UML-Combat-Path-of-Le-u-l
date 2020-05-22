@@ -6,10 +6,9 @@
 <!-- nav -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+<nav class="navbar" *ngIf="currentUser">
     <div class="navbar-nav">
-        <a class="nav-item nav-link" (click)="logout()">Wyloguj</a>
-        <a routerLink="" class="nav-item nav-link" >ABOUT</a>
+        <a class="nav-link" (click)="logout()">Wyloguj</a>
     </div>
 </nav>
 
