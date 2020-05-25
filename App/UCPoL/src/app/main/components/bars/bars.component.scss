@@ -11,7 +11,6 @@ $hpPrctD : var(--hpPrctd);
     min-width: 28%;
     max-width: 28%;
     float: right;
-    margin-left: 1%;
     overflow: hidden;
     background-color: dimgray;
     padding: 0;
@@ -59,7 +58,8 @@ $hpPrctD : var(--hpPrctd);
   height: 15%;
   background-repeat: no-repeat;;
   background-image: url(../../../../assets/img/itemki.png);
-  background-size: 100%;  
+  background-size: 100%; 
+  position: relative; 
 }
 .itemy{
   margin-top: 2%;
@@ -68,7 +68,8 @@ $hpPrctD : var(--hpPrctd);
   height: 35%;
   background-repeat: no-repeat;;
   background-image: url(../../../../assets/img/loot.png);
-  background-size: 100%;  
+  background-size: 100%; 
+  position: relative;
 }
 
 #overlay {

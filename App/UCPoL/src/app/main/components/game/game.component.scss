@@ -5,7 +5,7 @@ $vbattle : var(--vbattle);
 $enemy1V : var(--venemy1);
 
 .container{
-    margin-left: 2%;
+    margin-left: 1.5%;
     width: 69%;
     min-width: 69%;
     max-width: 69%;
@@ -21,7 +21,6 @@ $enemy1V : var(--venemy1);
     background-size: 30%;
     background-color: dimgray;
     padding: 0;
-    margin: 0;
 
 }
 
@@ -43,7 +42,7 @@ div.ruch > input{
 
 }
 .hero{
-    width: 10%;
+    width: 8%;
     height: 12%;
     position: absolute;
     left: $y;

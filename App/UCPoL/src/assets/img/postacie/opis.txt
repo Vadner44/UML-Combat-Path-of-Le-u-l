@@ -1,0 +1,9 @@
+Main hero (name tbd) - cichy, jego ulubiona broń to kosa. Posiada 2 kategorie ataków: fizyczne i magiczne. Ataki fizyczne to cięcia, 
+wiry kosą. Używa magi krwi do zadawania obrażeń, buffowania się i leczenia.
+Moby - 3 warianty kultystów poddanych bossowi. Ich ataki to głównie cięcia z broni białej oraz różnego rodzaju klątwy.
+Boss - Ogromny demon który ma bardzo duże obrażenia fizyczne. Może poświęcić część swojego zycia zeby zwiekszyc obrazenia. Główne ataki to 
+uderzenia ogromnymi pazurami.
+Npc1_Pustelnik - Znajduje głównego bohatera. Opowiada mu o czychacjącym niebezpieczenśtwie i kieruje go do koljenego npca- Rycerza, który
+pomoże glownemu bohaterowi znalezc bron i pokonac przeciwników.
+Npc2_Rycerz - (mini tutorial do walki?)
+Npc3_Wieśniak - taki zapasowy, miałem wenę to narysowałem

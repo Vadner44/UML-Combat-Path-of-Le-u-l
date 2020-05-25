@@ -18,7 +18,7 @@ export class GameComponent implements OnInit {
   anims = ["1.png","2.png","3.png","4.png"];
   animwsk = 0;
   src = this.path+"char.png";
-  y=200;
+  y=250;
   x=200;
   bars = new BarsComponent();
   //logs = new LogsComponent();
