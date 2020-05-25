@@ -33,7 +33,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return next.handle(request);
             }    
         }
-
+        
         // route functions
 
         function authenticate() {
