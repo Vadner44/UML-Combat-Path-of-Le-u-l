@@ -30,9 +30,12 @@ export class BarsComponent implements OnInit {
   containers = [];
 
   images = [{id: 0, name: "miecz", url:'../../../../assets/img/miecz.png'}, {id: 1, name: "kosa", url:"../../../../assets/img/kosa.png"}];
-
+  //images=['miecz.png', 'kosa.png']
 
   add (){
-  this.containers.push(this.images[1]);
+    let index=Math.round(Math.random())
+  this.containers.push(this.images[index]);
+  console.log(this.images[index])
+  console.log(this.containers)
 }
 }

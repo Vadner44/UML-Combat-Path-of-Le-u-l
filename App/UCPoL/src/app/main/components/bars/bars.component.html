@@ -7,7 +7,9 @@
 <div class="eq"> </div>
 <button (click)="add()">Add</button>
 <div id="content">
-    <div id="contentInside" *ngFor="let image of containers"></div>
+    <div id="contentInside" *ngFor="let image of containers">
+      <img class="item" src={{image.url}}/>
+    </div>
   </div>
 <!-- <div class="itemy"> </div> -->
 
