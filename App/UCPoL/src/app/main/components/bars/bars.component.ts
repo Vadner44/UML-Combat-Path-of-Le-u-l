@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input  } from '@angular/core';
 
 @Component({
   selector: 'app-bars',
@@ -27,5 +27,12 @@ export class BarsComponent implements OnInit {
     console.log(this.hp);
   }
 
-}
+  containers = [];
 
+  images = [{id: 0, name: "miecz", url:'../../../../assets/img/miecz.png'}, {id: 1, name: "kosa", url:"../../../../assets/img/kosa.png"}];
+
+
+  add (){
+  this.containers.push(this.images[1]);
+}
+}

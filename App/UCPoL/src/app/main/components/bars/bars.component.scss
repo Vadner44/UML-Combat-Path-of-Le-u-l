@@ -7,9 +7,9 @@ $hpPrctD : var(--hpPrctd);
     height: 95%;
     min-height: 95%;
     max-height: 95%;
-    width: 28%;
-    min-width: 28%;
-    max-width: 28%;
+    width: 28vw;
+    min-width: 28vw;
+    max-width: 28vw;
     float: right;
     overflow: hidden;
     background-color: dimgray;
@@ -66,10 +66,42 @@ $hpPrctD : var(--hpPrctd);
   margin-left: 5%;
   width: 85%;
   height: 35%;
-  background-repeat: no-repeat;;
+  background-repeat: no-repeat;
   background-image: url(../../../../assets/img/loot.png);
   background-size: 100%; 
   position: relative;
+}
+
+#content{
+  margin-top: 3.5%;
+  margin-left: 4%;
+  width: 85%;
+  height: 30%;
+  border:solid black;
+  background-repeat: no-repeat;
+  background-image: url(../../../../assets/img/loot.png);
+  background-size: 100%; 
+}
+#contentInside{
+  margin-left: 4%;
+  margin-top: 5%;
+  width: 8%;
+  height:13%;
+  background-image: url(../../../../assets/img/miecz.png);
+  background-size: 100%; 
+  border: solid black;
+  display:inline-flex;
+}
+
+
+button{
+position: absolute;
+width:  3%;
+height: 3%;
+font-size:  1vw;
+margin: 0;
+padding: 0;
+border: none;
 }
 
 #overlay {
@@ -91,3 +123,4 @@ $hpPrctD : var(--hpPrctd);
     font-size: 1vw;
     margin-left: 16%;
   }
+

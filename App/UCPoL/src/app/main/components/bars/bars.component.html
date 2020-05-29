@@ -5,7 +5,11 @@
 <div class="circle" id ="hp"></div>
 <div class="circle" id ="exp"></div>
 <div class="eq"> </div>
-<div class="itemy"> </div>
+<button (click)="add()">Add</button>
+<div id="content">
+    <div id="contentInside" *ngFor="let image of containers"></div>
+  </div>
+<!-- <div class="itemy"> </div> -->
 
 
 </div>
