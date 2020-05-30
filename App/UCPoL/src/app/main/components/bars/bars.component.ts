@@ -27,15 +27,17 @@ export class BarsComponent implements OnInit {
     console.log(this.hp);
   }
 
-  containers = [];
 
-  images = [{id: 0, name: "miecz", url:'../../../../assets/img/miecz.png'}, {id: 1, name: "kosa", url:"../../../../assets/img/kosa.png"}];
-  //images=['miecz.png', 'kosa.png']
-
+  itemy = [{id: 0, name: "miecz", url:'../../../../assets/img/miecz.png'}, {id: 1, name: "kosa", url:"../../../../assets/img/kosa.png"}];
   add (){
     let index=Math.round(Math.random())
-  this.containers.push(this.images[index]);
-  console.log(this.images[index])
-  console.log(this.containers)
+    this.images.push(this.itemy[index]);
+    localStorage.setItem('images', JSON.stringify(this.images));
 }
+  images = JSON.parse(localStorage.getItem('images')) || [];
+
+  clear(){
+    localStorage.removeItem('images');
+    window.location.reload();
+  }
 }

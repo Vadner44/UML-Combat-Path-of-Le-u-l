@@ -57,9 +57,10 @@ $hpPrctD : var(--hpPrctd);
   width: 25%;
   height: 15%;
   background-repeat: no-repeat;;
-  background-image: url(../../../../assets/img/itemki.png);
+  background-image: url(../../../../assets/img/itemki2.png);
   background-size: 100%; 
-  position: relative; 
+  position: relative;
+
 }
 .itemy{
   margin-top: 2%;
@@ -77,35 +78,34 @@ height: 100%;
 
 }
 #content{
-  margin-top: 3.5%;
   margin-left: 4%;
   width: 85%;
-  height: 30%;
+  height: 28%;
   border:solid black;
   background-repeat: no-repeat;
-  background-image: url(../../../../assets/img/loot.png);
+  // background-image: url(../../../../assets/img/loot.png);
   background-size: 100%; 
 }
 #contentInside{
-  margin-left: 4%;
-  margin-top: 5%;
+  margin-left: 5%;
+  margin-top: 6%;
   width: 8%;
   height:13%;
-  //background-image: url(../../../../assets/img/miecz.png);
   background-size: 100%; 
   border: solid black;
   display:inline-flex;
 }
 
+#buttony{
+  margin-left: 4%;
+padding: 0;
+}
 
 button{
-position: absolute;
-width:  3%;
-height: 3%;
 font-size:  1vw;
 margin: 0;
 padding: 0;
-border: none;
+border: solid;
 }
 
 #overlay {
