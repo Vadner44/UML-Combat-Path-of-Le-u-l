@@ -1,0 +1,55 @@
+$setterH : var(--setterH);
+$setterW : var(--setterW);
+$setterX : var(--setterX);
+$setterY : var(--setterY);
+$setterVisibility : var(--vis);
+
+.container{
+
+    width:50%;
+    min-width: 69%;
+    max-width: 69%;
+    height: 70%;
+    min-height: 70%;
+    max-height: 70%;
+    border-style: solid;
+    border-width: 0px;
+    float:left;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-image: url(../../../assets/img/env/dom_inside.png);
+    background-size: 30%;
+    background-color: dimgray;
+    padding: 0;
+
+}
+button, input,#inputs{
+    float: right;
+}
+input{
+    width: 30px;
+}
+
+#status{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    background-color: rebeccapurple;
+}
+.trueStatus{
+    color: yellowgreen;
+}
+.falseStatus{
+    color: red;
+}
+#setter{
+    position: absolute;
+    width: $setterW;
+    height: $setterH;
+    border-radius: 5px;
+    border-style: solid;
+    left: $setterX;
+    top: $setterY;
+    visibility: $setterVisibility;
+    overflow: hidden;
+}

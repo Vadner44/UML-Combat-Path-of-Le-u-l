@@ -1,0 +1,12 @@
+<div (document:mousemove)="onMouseMove($event)" (click)="setCollider()" id="box" class="container">
+    <button (click)="change()">Collier</button><br><br>
+    <div id="inputs">
+    Height<input #box (keyup.enter)="setHv(box.value)"><br>
+    Width<input #box (keyup.enter)="setWv(box.value)"></div>
+    <div id="status">
+    <div *ngIf="collider; else elseBlock"><span class="trueStatus">Setting Colliders</span></div>
+        <ng-template #elseBlock><span class="falseStatus">Idle mode</span></ng-template>
+        </div>
+        <div id="setter" > </div>
+        
+</div>
