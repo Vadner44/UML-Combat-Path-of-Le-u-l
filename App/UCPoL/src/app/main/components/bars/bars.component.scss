@@ -78,6 +78,7 @@ height: 100%;
 
 }
 #content{
+  margin-top: 1%;
   margin-left: 4%;
   width: 85%;
   height: 28%;
@@ -87,8 +88,8 @@ height: 100%;
   background-size: 100%; 
 }
 #contentInside{
-  margin-left: 5%;
-  margin-top: 6%;
+  margin-left: 5.5%;
+  margin-top: 5.5%;
   width: 8%;
   height:13%;
   background-size: 100%; 
@@ -97,15 +98,15 @@ height: 100%;
 }
 
 #buttony{
-  margin-left: 4%;
+margin-left: 3%;
 padding: 0;
 }
 
 button{
 font-size:  1vw;
-margin: 0;
+margin-left: 1%;
 padding: 0;
-border: solid;
+border: none;
 }
 
 #overlay {

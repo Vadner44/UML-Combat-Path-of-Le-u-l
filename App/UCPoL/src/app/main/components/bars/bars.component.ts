@@ -36,6 +36,11 @@ export class BarsComponent implements OnInit {
 }
   images = JSON.parse(localStorage.getItem('images')) || [];
 
+  delete(){
+    this.images.pop();
+    localStorage.setItem('images', JSON.stringify(this.images));
+  }
+
   clear(){
     localStorage.removeItem('images');
     window.location.reload();
