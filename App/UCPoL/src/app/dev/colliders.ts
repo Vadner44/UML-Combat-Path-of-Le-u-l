@@ -5,7 +5,7 @@ interface colliderInt {
     y2: number;
   }
 
-export let LOGS: colliderInt[] = [
-      {x1: 26,y1: 180,x2: 58,y2: 212 },
+export let COLLIDERS: colliderInt[] = [
+      
     ];
   

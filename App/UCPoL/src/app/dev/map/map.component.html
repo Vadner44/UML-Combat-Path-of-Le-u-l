@@ -1,5 +1,7 @@
 <div (document:mousemove)="onMouseMove($event)" (click)="setCollider()" id="box" class="container">
     <button (click)="change()">Collier</button><br><br>
+    <button (click)="saveCollider()">Save</button><br><br>
+    <button (click)="clearCollider()">Clear</button><br><br>
     <div id="inputs">
     Height<input #box (keyup.enter)="setHv(box.value)"><br>
     Width<input #box (keyup.enter)="setWv(box.value)"></div>

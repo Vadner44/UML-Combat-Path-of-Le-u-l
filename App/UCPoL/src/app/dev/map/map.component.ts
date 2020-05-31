@@ -1,11 +1,13 @@
 import { Component, OnInit,HostListener } from '@angular/core';
 import {DevModule} from '../dev.module';
+import {COLLIDERS} from '../colliders';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
+  collidersarr = COLLIDERS;
   collider = false;
   userY : number;
   userX : number;
@@ -23,7 +25,11 @@ export class MapComponent implements OnInit {
     document.documentElement.style.setProperty('--setterH', `16px`);
     document.documentElement.style.setProperty('--vis', `hidden`);
   }
-  change():void{
+  sleep(ms = 0) {
+    return new Promise(r => setTimeout(r, ms));
+  }
+  async change(){
+    await this.sleep(20);
     this.collider? this.collider= false: this.collider  =true; 
     this.collider? document.documentElement.style.setProperty('--vis', `visible`): document.documentElement.style.setProperty('--vis', `hidden`); 
   }
@@ -49,8 +55,17 @@ export class MapComponent implements OnInit {
        console.log(this.userX +" " + this.userY);
        this.rightCornerX = +this.wv + this.userX ;
        this.rightCornerY = +this.hv + this.userY ;
-       console.log(this.rightCornerX+" "+this.rightCornerY);
+       this.collidersarr.push({x1:this.userY,y1:this.userX,x2:this.rightCornerY,y2:this.rightCornerX});
+       for(let col of this.collidersarr){
+         console.log(col);
+       }
      }
+   }
+   saveCollider():void{
+    localStorage.setItem('colliders', JSON.stringify(this.collidersarr));
+   }
+   clearCollider():void{
+    localStorage.removeItem('colliders');
    }
 
 }

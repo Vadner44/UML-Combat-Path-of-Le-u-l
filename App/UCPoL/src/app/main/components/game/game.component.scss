@@ -42,12 +42,17 @@ div.ruch > input{
 
 }
 .hero{
-    width: 8%;
-    height: 12%;
+    width: 3%;
+    height: 10%;
     position: absolute;
     left: $y;
     top: $x;
     visibility: $vprops;
+    background-position: center;
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-image: url(../../../../assets/img/char.png);
 
 }
 #spikes{
