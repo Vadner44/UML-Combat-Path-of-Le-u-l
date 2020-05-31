@@ -32,6 +32,9 @@ export class BarsComponent implements OnInit {
   images = JSON.parse(localStorage.getItem('images')) || [];
 
   add (){
+    if(this.images.length === 28) {
+      return;
+   }
     let index=Math.round(Math.random())
     this.images.push(this.itemy[index]);
     localStorage.setItem('images', JSON.stringify(this.images));
@@ -49,14 +52,20 @@ export class BarsComponent implements OnInit {
 
   eq = JSON.parse(localStorage.getItem('eq')) || [];
 
-  select() {
-    this.eq.push(this.images[0]);
-    this.eq.length = 1;
+  select(index, image) {
+    if(this.eq.length === 1) {
+       return;
+    }
+    this.eq.push(image);
+    this.images.splice(index, 1);
+    localStorage.setItem('images', JSON.stringify(this.images));
     localStorage.setItem('eq', JSON.stringify(this.eq));
   }
 
-  unselect() {
-    this.eq.pop();
+  unselect(index, image) {
+    this.eq.splice(index, 1);
+    this.images.push(image);
+    localStorage.setItem('images', JSON.stringify(this.images));
     localStorage.setItem('eq', JSON.stringify(this.eq));
   }
 

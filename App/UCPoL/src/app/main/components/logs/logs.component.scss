@@ -13,48 +13,42 @@
 
 }
 .controls{
-    width: 100%;
+    width: 70%;
     height: 100%;
     margin-top: 4%;
-    position: absolute;
-    margin-left: 63%;  
+    position: absolute; 
     padding: 0;
     font-size: 2vh;
 }
 
 button.up{
     border: none;
-    margin-left: 2%;
-    width: 2%;
-    max-width: 2%;
-    min-width: 2%;
+    margin-left: 94%;
+    width: 3%;
     height: 4%;
     padding: 0;
 }
 
 button.down{
     border: none;
-    width: 2%;
-    max-width: 2%;
-    min-width: 2%;
+    float: right;
+    width: 3%;
     height: 4%;
     padding: 0;
     margin: 0;
 }
 button.left{
     border: none;
-    width: 2%;
-    max-width: 2%;
-    min-width: 2%;
+    float: right;
+    width: 3%;
     height: 4%;
     padding: 0;
     margin: 0;
 }
 button.right{
     border: none;
-    width: 2%;
-    max-width: 2%;
-    min-width: 2%;
+    float: right;
+    width: 3%;
     height: 4%;
     padding: 0;
     margin: 0;

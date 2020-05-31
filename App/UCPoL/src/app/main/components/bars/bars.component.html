@@ -4,9 +4,10 @@
     
 <div class="circle" id ="hp"></div>
 <div class="circle" id ="exp"></div>
+<div class="pusty"></div>
 <div class="eku">
-  <div id="contentInside2" *ngFor="let image of eq">
-    <img class="item" src={{image.url}} (click)="unselect()"/> 
+  <div id="contentInside2" *ngFor="let image of eq; let i=index">
+    <img class="item" src={{image.url}}  (click)="unselect(i, image)"/>  
   </div>
    </div>
 <div id="buttony">
@@ -15,12 +16,9 @@
   <button (click)="clear()">Clear</button>
 </div>
 <div id="content">
-    <div id="contentInside" *ngFor="let image of images">
-      <img class="item" src={{image.url}} (click)="select()"/>
-
+    <div id="contentInside" *ngFor="let image of images; let i=index">
+      <img class="item" src={{image.url}} (click)="select(i, image)"/>
     </div>
   </div>
-<!-- <div class="itemy"> </div> -->
-
 
 </div>
