@@ -8,8 +8,12 @@
 
 <nav class="navbar" *ngIf="currentUser">
     <div class="navbar-nav">
-        <a class="nav-link" (click)="logout()">Wyloguj</a>
+       <a class="nav-link" (click)="logout()">Wyloguj</a>
+        <a class="nav-link" (click)="home()">Home </a>  
+        <a class="nav-link" (click)="about()">O grze </a>
+        <a class="nav-link" (click)="dev()">Dev </a>
     </div>
+    
 </nav>
 
 <!-- main app container 

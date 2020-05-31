@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  font-family: arcadeclassic;
+  background-image: url('../../../assets/img/tlo2.jpg');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.text-block {
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 28%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px red;
+  color:grey;
+}
+.text-block2 {
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 28%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px red;
+  color:grey;
+}
+.header {
+  position: absolute;
+  font-size: 60px;
+  color: white;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px red;
+}
+.about {
+  position: absolute;
+  font-size: 25px;
+  color: white;
+  bottom: 30%;
+  width: 100%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px red;
+  color:grey;
+}

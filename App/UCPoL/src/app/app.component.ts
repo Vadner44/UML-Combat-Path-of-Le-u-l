@@ -25,4 +25,15 @@ export class AppComponent {
         this.authenticationService.logout();
         this.router.navigate(['/login']);
     }
+    about(){
+      this.router.navigate(['/about'])
+    }
+    dev(){
+      this.router.navigate(['/dev'])
+    }
+    home(){
+      this.router.navigate(['/'])
+    }
+
+    
 }
