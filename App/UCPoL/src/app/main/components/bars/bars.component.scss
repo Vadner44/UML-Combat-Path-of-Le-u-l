@@ -51,7 +51,7 @@ $hpPrctD : var(--hpPrctd);
   background-size: cover;
 }
 
-.eq{
+.eku{
   margin-top: 55%;
   margin-left: 33%;
   width: 25%;
@@ -75,7 +75,11 @@ $hpPrctD : var(--hpPrctd);
 .item{
 width: 100%;
 height: 100%;
+}
 
+.itemek{
+  width: 300%;
+  height: 200%;
 }
 #content{
   margin-top: 1%;
@@ -93,6 +97,16 @@ height: 100%;
   width: 8%;
   height:13%;
   background-size: 100%; 
+  border: solid black;
+  display:inline-flex;
+}
+#contentInside2{
+  margin-left: 0%;
+  margin-top: 35%;
+  width: 32%;
+  height:30%;
+  background-size: 100%; 
+  background-color: burlywood;
   border: solid black;
   display:inline-flex;
 }

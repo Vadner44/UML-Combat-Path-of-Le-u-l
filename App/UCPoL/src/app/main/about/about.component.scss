@@ -1,52 +1,53 @@
 .container {
-  position: relative;
   font-family: arcadeclassic;
   background-image: url('../../../assets/img/tlo2.jpg');
-  background-size: cover;
+  background-size: 100%;
   height: 100%;
   width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.bloki{
+  padding-top: 2%;
+  width: 100%;
+  text-shadow: 0.1vw 0.1vw red;
 }
 
 .text-block {
-  position: absolute;
-  font-size: 30px;
+  float: left;
+  margin-left: 20%;
+  font-size: 2vw;
   color: white;
-  position: absolute;
-  top: 28%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  text-shadow: 2px 2px red;
+  width: 20%;
   color:grey;
 }
 .text-block2 {
-  position: absolute;
-  font-size: 30px;
+  float: left;
+  margin-left: 20%;
+  font-size: 2vw;
   color: white;
-  position: absolute;
-  top: 28%;
-  right: 10%;
-  transform: translate(-50%, -50%);
-  text-shadow: 2px 2px red;
+  width: 20%;
   color:grey;
 }
-.header {
-  position: absolute;
-  font-size: 60px;
+.head {
+  padding-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 3vw;
   color: white;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-shadow: 2px 2px red;
+  text-shadow: 0.1vw 0.1vw red;
 }
 .about {
-  position: absolute;
-  font-size: 25px;
+  width: 90%;
+  margin-left: 5%;
+  text-align: center;
+  padding-top: 5%;
+  float: left;
+  font-size: 2.5vw;
   color: white;
-  bottom: 30%;
-  width: 100%;
-  left: 51%;
-  transform: translate(-50%, -50%);
-  text-shadow: 2px 2px red;
-  color:grey;
+  text-shadow: 0.1vw 0.1vw red;
 }
