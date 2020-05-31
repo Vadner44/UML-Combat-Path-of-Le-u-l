@@ -29,13 +29,14 @@ export class BarsComponent implements OnInit {
 
 
   itemy = [{id: 0, name: "miecz", url:'../../../../assets/img/miecz.png'}, {id: 1, name: "kosa", url:"../../../../assets/img/kosa.png"}];
+  images = JSON.parse(localStorage.getItem('images')) || [];
+
   add (){
     let index=Math.round(Math.random())
     this.images.push(this.itemy[index]);
     localStorage.setItem('images', JSON.stringify(this.images));
-}
-  images = JSON.parse(localStorage.getItem('images')) || [];
-
+  }
+  
   delete(){
     this.images.pop();
     localStorage.setItem('images', JSON.stringify(this.images));
@@ -45,4 +46,18 @@ export class BarsComponent implements OnInit {
     localStorage.removeItem('images');
     window.location.reload();
   }
+
+  eq = JSON.parse(localStorage.getItem('eq')) || [];
+
+  select() {
+    this.eq.push(this.images[0]);
+    this.eq.length = 1;
+    localStorage.setItem('eq', JSON.stringify(this.eq));
+  }
+
+  unselect() {
+    this.eq.pop();
+    localStorage.setItem('eq', JSON.stringify(this.eq));
+  }
+
 }
