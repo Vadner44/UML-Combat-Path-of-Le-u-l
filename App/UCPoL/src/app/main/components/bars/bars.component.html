@@ -3,12 +3,37 @@
 <div class="container">
     
 <div class="circle" id ="hp"></div>
+<div id ="lvl">LVL 1</div>
 <div class="circle" id ="exp"></div>
-<div class="pusty"></div>
+<div class="staty">
+STATYSTYKI
+<table>
+  <tr>
+  <td>STR</td> <td>{{str}}</td>  <td><button (click)="addstr()">Add</button></td>
+  </tr>
+  <tr>
+  <td>DEF</td> <td>{{def}}</td>  <td><button (click)="adddef()">Add</button></td>
+  </tr>
+  <tr>
+  <td>INT</td> <td>{{int}}</td>  <td><button (click)="addint()">Add</button></td>
+  </tr>
+  </table>
+  <button (click)="reset()">reset</button>
+  <p>Ilość punktów do rozdania: {{skillpoint}}</p>
+</div>
 <div class="eku">
+  <div id="item1">
   <div id="contentInside2" *ngFor="let image of eq; let i=index">
     <img class="item" src={{image.url}}  (click)="unselect(i, image)"/>  
-  </div>
+  </div></div>
+  <div id="item2">
+    <div id="contentInside2" *ngFor="let image of eq2; let i=index">
+      <img class="item" src={{image.url}}  (click)="unselect2(i, image)"/>  
+    </div></div>
+  <div id="item3">
+      <div id="contentInside2" *ngFor="let image of eq3; let i=index">
+        <img class="item" src={{image.url}}  (click)="unselect3(i, image)"/>  
+      </div></div>
    </div>
 <div id="buttony">
   <button (click)="add()">Add</button>
@@ -16,9 +41,23 @@
   <button (click)="clear()">Clear</button>
 </div>
 <div id="content">
+  <P>BROŃ</P>
+  <div id="pusty"></div>
     <div id="contentInside" *ngFor="let image of images; let i=index">
       <img class="item" src={{image.url}} (click)="select(i, image)"/>
     </div>
+    <P>ZBROJA</P>
+    <div id="pusty"></div>
+    <div id="contentInside" *ngFor="let image of images2; let i=index">
+      <img class="item" src={{image.url}} (click)="select2(i, image)"/>
+    </div>
+    <P>AMULETY</P>
+    <div id="pusty"></div>
+    <div id="contentInside" *ngFor="let image of images3; let i=index">
+      <img class="item" src={{image.url}} (click)="select3(i, image)"/>
+    </div>
+
+
   </div>
 
 </div>

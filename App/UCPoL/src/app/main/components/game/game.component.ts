@@ -98,7 +98,7 @@ sleep(ms = 0) {
     
     }
     else{
-      this.addLog("wyleczyłeś obrażeń:",amount);
+      this.addLog("Wyleczyłeś obrażeń:",amount);
     }
    /* if( amount > 0 && this.bars.hp < 100){
     this.logs.addLog(this.heal,amount);
@@ -107,6 +107,14 @@ sleep(ms = 0) {
       this.logs.addLog(this.attack,amount);
     } */
   }
+
+  changeEXP(amount: number): void {
+    this.bars.changeHP(amount);
+    if(amount > 0 ){
+    this.addLog("Otrzymałeś doświadczenie:",amount);
+    }
+  }
+
   addLog(newMessage:string,newValue:number){
     this.logs.push({message:newMessage,value:newValue});
 }
