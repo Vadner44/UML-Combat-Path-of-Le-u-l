@@ -3,6 +3,9 @@ $y : var(--y);
 $vprops : var(--vprops);
 $vbattle : var(--vbattle);
 $enemy1V : var(--venemy1);
+$currMap : var(--currMap);
+$mapV : var(--VMap);
+$mapSize : var(--mapSize);
 
 .container{
     margin-left: 1.5%;
@@ -17,10 +20,11 @@ $enemy1V : var(--venemy1);
     float:left;
     overflow: hidden;
     background-repeat: no-repeat;
-    background-image: url(../../../../assets/img/env/dom_inside.png);
-    background-size: 30%;
+    background-image: $currMap;
+    background-size: $mapSize;
     background-color: dimgray;
     padding: 0;
+    visibility: $mapV;
 
 }
 
@@ -62,7 +66,7 @@ div.ruch > input{
     position: absolute;
     left:15%;
     top: 45%;
-    visibility: $enemy1V;
+    visibility: hidden;
 }
 #hppot{
     background-size: cover;
@@ -72,7 +76,7 @@ div.ruch > input{
     position: absolute;
     left:5%;
     top: 35%;
-    visibility: $vprops;
+    visibility: hidden;
 }
 #battle{
     width: 100%;

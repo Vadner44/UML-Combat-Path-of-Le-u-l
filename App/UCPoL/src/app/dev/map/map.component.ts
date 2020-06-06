@@ -1,13 +1,13 @@
 import { Component, OnInit,HostListener } from '@angular/core';
 import {DevModule} from '../dev.module';
-import {COLLIDERS} from '../colliders';
+import {COLLIDERS1,COLLIDERS2,MAPS} from '../colliders';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  collidersarr = COLLIDERS;
+  collidersarr = COLLIDERS1;
   collider = false;
   userY : number;
   userX : number;

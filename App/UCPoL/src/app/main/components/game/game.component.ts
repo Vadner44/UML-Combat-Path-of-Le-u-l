@@ -3,7 +3,7 @@ import { LogsComponent} from '../logs/logs.component';
 import { BarsComponent } from '../bars/bars.component';
 import { I18nSelectPipe } from '@angular/common';
 import { LOGS } from '../logs/log';
-import {COLLIDERS} from "../../../dev/colliders"
+import {COLLIDERS1,COLLIDERS2,MAPS} from "../../../dev/colliders"
 
 
 @Component({
@@ -24,7 +24,7 @@ export class GameComponent implements OnInit {
     console.log(this.userX+" "+this.userY);
   }
  */
-  colliders = COLLIDERS;
+  colliders = COLLIDERS1;
   logs = LOGS;
   path = "../../../../assets/img/";
   anims = ["1.png","2.png","3.png","4.png"];
@@ -52,6 +52,8 @@ export class GameComponent implements OnInit {
     document.documentElement.style.setProperty('--x', `${this.x}px`);
     document.documentElement.style.setProperty('--vprops', `visible`);
     document.documentElement.style.setProperty('--vbattle', `hidden`);
+    document.documentElement.style.setProperty('--currMap', `url(../../../../assets/img/env/1.png)`);
+    
     this.colliders = JSON.parse(localStorage.getItem("colliders"));
     for(let pos of this.colliders){console.log(pos);}
 
@@ -63,8 +65,6 @@ sleep(ms = 0) {
 }
 
   async move(newy,newx) {
-    this.collisionChecking(this.x + (16*newx),this.y + (16*newy));
-    if( ((this.x + (16*newx)) < 420)&&((this.x + (16*newx)) > 55 )&&((this.y + (16*newy)) < 296)&&((this.y + (16*newy)) > -40 ) ){
       if(this.collisionChecking(this.x + (16*newx),this.y + (16*newy))){
     for(let i = 0; i < 16; i++){
       this.y+=newy;
@@ -74,12 +74,16 @@ sleep(ms = 0) {
     document.documentElement.style.setProperty('--x', `${this.x}px`);
     
     await this.sleep(20);
-    }}
+    }
     console.log("yx"+this.y+" "+this.x);
     
   }
   
     console.log(this.x+" "+this.y);
+    if(this.x > 430 && (this.y > 110 && this.y < 186)){
+      this.changemap(1);
+    }
+    /*
     if((this.x >300 && this.x<444)&&(this.y > 220 && this.y<316) ){
       if(!this.won) {
         this.battle();
@@ -88,7 +92,7 @@ sleep(ms = 0) {
       
     }
     else  if((this.x >232 && this.x<408)&&(this.y > 24 && this.y<174) ){
-        this.changeHP(20);    } 
+        this.changeHP(20);    } */
   }
   
   changeHP(amount: number): void {
@@ -154,6 +158,21 @@ sleep(ms = 0) {
      }
     }
     return true
+  }
+
+
+  maps = MAPS;
+  
+ 
+  changemap(mapID) :void{
+    document.documentElement.style.setProperty('--currMap', `url(../../../../assets/img/env/${this.maps[mapID].path})`);
+    document.documentElement.style.setProperty('--mapSize', `${this.maps[mapID].size}`);
+    this.x = this.maps[mapID].startX
+    this.y = this.maps[mapID].startY
+    document.documentElement.style.setProperty('--y', `${this.y}px`);
+    document.documentElement.style.setProperty('--x', `${this.x}px`);
+
+    console.log(this.maps[mapID]);
   }
 
   counter():void{
