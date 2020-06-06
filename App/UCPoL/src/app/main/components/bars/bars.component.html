@@ -44,7 +44,7 @@ STATYSTYKI
   <P>BROŃ</P>
   <div id="pusty"></div>
     <div id="contentInside" *ngFor="let image of images; let i=index">
-      <img class="item" src={{image.url}} (click)="select(i, image)"/>
+      <img class="item" src={{image.url}} (click)="select(i, image, str)"/>
     </div>
     <P>ZBROJA</P>
     <div id="pusty"></div>

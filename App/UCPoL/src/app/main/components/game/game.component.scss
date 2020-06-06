@@ -21,7 +21,6 @@ $enemy1V : var(--venemy1);
     background-size: 30%;
     background-color: dimgray;
     padding: 0;
-
 }
 
 div.ruch > input{
@@ -37,8 +36,8 @@ div.ruch > input{
     cursor: default;
     outline: none;
     visibility: $vprops;
-
 }
+
 .hero{
     width: 3%;
     height: 10%;

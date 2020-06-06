@@ -133,7 +133,8 @@ margin: 0;
 
 #content > p{
   font-size: 1vw;
-  color: black;
+  color: white;
+  text-shadow: 0.1vw 0.1vw black;
   margin-top: 2%;
   margin-left: 5%;
   margin-bottom: 0;
@@ -154,17 +155,19 @@ margin: 0;
   float: left;
   display: inline-block;
 }
+
 #contentInside{
   margin-top: 1%;
   margin-left: 5.5%;
   width: 10%;
   height:15%;
-  background-size: 100%; 
+  background-size: 100%;
   border: solid black;
   display:inline-flex;
   padding: 0;
   float: left;
 }
+
 #contentInside2{
   margin-left: 37%;
   margin-top: 24%;
@@ -174,7 +177,6 @@ margin: 0;
   background-color: burlywood;
   border: solid black;
   display:inline-flex;
-
 }
 
 

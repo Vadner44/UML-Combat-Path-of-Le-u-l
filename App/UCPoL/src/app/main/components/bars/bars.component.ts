@@ -39,13 +39,13 @@ export class BarsComponent implements OnInit {
   bronie = [{id: 0, name: "miecz", str: 5, url:'../../../../assets/img/miecz.png'}, {id: 1, name: "kosa",str: 7, url:"../../../../assets/img/kosa.png"}];
   zbroje = [{id: 0, name: "zbroja", def: 5, url:'../../../../assets/img/zbroja.png'}, {id: 1, name: "zbroja", def: 5, url:'../../../../assets/img/zbroja.png'}];
   amulety = [{id: 0, name: "amulet", int: 3, url:'../../../../assets/img/amulet.png'}, {id: 1, name: "amulet", int: 3, url:'../../../../assets/img/amulet.png'}];
-  images = JSON.parse(localStorage.getItem('images')) || [];
+  images  = JSON.parse(localStorage.getItem('images')) || [];
   images2 = JSON.parse(localStorage.getItem('images2')) || [];
   images3 = JSON.parse(localStorage.getItem('images3')) || [];
 
 
   add (){
-    if(this.images.length === 6) {
+    if(this.images.length === 6 || this.images2.length === 6 || this.images3.length === 6) {
       return;
    }
     let index=Math.round(Math.random())
@@ -78,7 +78,7 @@ export class BarsComponent implements OnInit {
 
   eq = JSON.parse(localStorage.getItem('eq')) || [];
 
-  select(index, image) {
+  select(index, image, str) {
     if(this.eq.length === 1) {
        return;
     }
@@ -91,6 +91,9 @@ export class BarsComponent implements OnInit {
   }
 
   unselect(index, image) {
+    if(this.images.length === 6) {
+      return;
+   }
     this.eq.splice(index, 1);
     this.images.push(image);
     localStorage.setItem('images', JSON.stringify(this.images));
@@ -112,6 +115,9 @@ export class BarsComponent implements OnInit {
   }
 
   unselect2(index, image) {
+    if(this.images2.length === 6) {
+      return;
+   }
     this.eq2.splice(index, 1);
     this.images2.push(image);
     localStorage.setItem('images2', JSON.stringify(this.images2));
@@ -134,6 +140,9 @@ export class BarsComponent implements OnInit {
   }
 
   unselect3(index, image) {
+    if(this.images3.length === 6) {
+      return;
+   }
     this.eq3.splice(index, 1);
     this.images3.push(image);
     localStorage.setItem('images3', JSON.stringify(this.images3));
