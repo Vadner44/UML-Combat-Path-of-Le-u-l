@@ -44,14 +44,14 @@ div.ruch > input{
 }
 
 .hero{
-    width: 3%;
-    height: 10%;
+    width: 4.5%;
+    height: 14%;
     position: absolute;
     left: $y;
     top: $x;
     visibility: $vprops;
     background-position: center;
-    background-size: 300%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-image: url(../../../../assets/img/char.png);
