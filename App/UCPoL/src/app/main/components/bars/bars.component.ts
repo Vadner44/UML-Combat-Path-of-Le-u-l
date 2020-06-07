@@ -170,6 +170,7 @@ int = JSON.parse(localStorage.getItem('int')) || 0;
 addstr() {
   if(this.sp > 0){
   this.sp--
+  localStorage.setItem('sp', JSON.stringify(this.sp));
   this.str++;
   localStorage.setItem('str', JSON.stringify(this.str));}
   else
@@ -179,6 +180,7 @@ addstr() {
 adddef() {
   if(this.sp > 0){
   this.sp--
+  localStorage.setItem('sp', JSON.stringify(this.sp));
   this.def++;
   localStorage.setItem('def', JSON.stringify(this.def));}
   else
@@ -188,6 +190,7 @@ adddef() {
 addint() {
   if(this.sp > 0){
   this.sp--
+  localStorage.setItem('sp', JSON.stringify(this.sp));
   this.int++;
   localStorage.setItem('int', JSON.stringify(this.int));}
   else
