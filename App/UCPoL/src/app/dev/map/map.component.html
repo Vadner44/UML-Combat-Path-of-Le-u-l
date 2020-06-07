@@ -3,8 +3,8 @@
     <button (click)="saveCollider()">Save</button><br><br>
     <button (click)="clearCollider()">Clear</button><br><br>
     <div id="inputs">
-    Height<input #box (keyup.enter)="setHv(box.value)"><br>
-    Width<input #box (keyup.enter)="setWv(box.value)"></div>
+    <input #box (keyup.enter)="setHv(box.value)"><p>Height</p><br><br>
+    <input #box (keyup.enter)="setWv(box.value)"><p>Width</p></div>
     <div id="status">
     <div *ngIf="collider; else elseBlock"><span class="trueStatus">Setting Colliders</span></div>
         <ng-template #elseBlock><span class="falseStatus">Idle mode</span></ng-template>

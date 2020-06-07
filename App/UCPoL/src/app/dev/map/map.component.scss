@@ -5,6 +5,7 @@ $setterY : var(--setterY);
 $setterVisibility : var(--vis);
 
 .container{
+    font-size: 2vw;
     margin-left: 1.5%;
     width: 69%;
     min-width: 69%;
@@ -23,11 +24,14 @@ $setterVisibility : var(--vis);
     padding: 0;
 
 }
-button, input,#inputs{
+button, input,#inputs, p{
     float: right;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 input{
-    width: 30px;
+    width: 10%;
 }
 
 #status{

@@ -8,14 +8,16 @@ import { Component, OnInit, Input  } from '@angular/core';
 export class BarsComponent implements OnInit {
 
   hp = 100;
-  exp = 50;
+  exp = 0;
   constructor() {
    }
 
   ngOnInit(): void {
     document.documentElement.style.setProperty('--hpPrct', `${this.hp}%`);
     document.documentElement.style.setProperty('--hpPrctd', `${this.hp - 100}%`);
+    document.documentElement.style.setProperty('--expPrct', `${this.exp}%`);
     console.log(document.documentElement.style.getPropertyValue('--hpPrct'));
+    console.log(document.documentElement.style.getPropertyValue('--expPrct'));
   }
 
   changeHP(amount: number): void {
@@ -27,10 +29,8 @@ export class BarsComponent implements OnInit {
   }
 
   changeEXP(amount: number): void {
-    if (this.exp > 0 && amount < 0 || this.exp < 100 && amount > 0) {
     this.exp += amount;
     document.documentElement.style.setProperty('--expPrct', `${this.exp}%`);
-    }
     console.log(this.exp);
   }
   

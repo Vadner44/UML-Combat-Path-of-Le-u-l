@@ -113,7 +113,7 @@ sleep(ms = 0) {
   }
 
   changeEXP(amount: number): void {
-    this.bars.changeHP(amount);
+    this.bars.changeEXP(amount);
     if(amount > 0 ){
     this.addLog("Otrzymałeś doświadczenie:",amount);
     }
