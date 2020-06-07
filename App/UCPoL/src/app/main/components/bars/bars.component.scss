@@ -43,7 +43,7 @@ $expPrctD : var(--expPrctd);
 }
 #exp{
   float: left;
-  background-image: url(../../../../assets/img/sklo.png), linear-gradient(to top, rgb(255, 217, 0) $expPrct, gray 0%);
+  background-image: url(../../../../assets/img/sklo.png), linear-gradient(to top, rgba(247, 210, 6, 0.801) $expPrct, gray 0%);
   background-size: cover;
   padding: 0;
   margin-left: 1.5%;
@@ -158,6 +158,7 @@ margin: 0;
 }
 
 #content{
+  margin-top: 2%;
   padding: 0;
   margin-left: 4%;
   width: 85%;
