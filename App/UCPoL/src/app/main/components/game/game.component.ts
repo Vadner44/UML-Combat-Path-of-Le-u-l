@@ -112,11 +112,10 @@ sleep(ms = 0) {
     } */
   }
 
-  changeEXP(amount: number): void {
-    this.bars.changeEXP(amount);
-    if(amount > 0 ){
-    this.addLog("Otrzymałeś doświadczenie:",amount);
-    }
+  changeEXP(): void {
+    this.bars.changeEXP();
+    this.addLog("Otrzymałeś doświadczenie:", 10);
+    
   }
 
   addLog(newMessage:string,newValue:number){

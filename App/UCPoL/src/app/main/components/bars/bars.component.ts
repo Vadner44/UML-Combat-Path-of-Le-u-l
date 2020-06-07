@@ -3,8 +3,8 @@ import { Component, OnInit, Input  } from '@angular/core';
 @Component({
   selector: 'app-bars',
   templateUrl: './bars.component.html',
-  styleUrls: ['./bars.component.scss']
-})
+  styleUrls: ['./bars.component.scss']})
+
 export class BarsComponent implements OnInit {
 
   hp = 100;
@@ -28,12 +28,23 @@ export class BarsComponent implements OnInit {
     console.log(this.hp);
   }
 
-  changeEXP(amount: number): void {
-    this.exp += amount;
-    document.documentElement.style.setProperty('--expPrct', `${this.exp}%`);
-    console.log(this.exp);
+  sp = JSON.parse(localStorage.getItem('sp')) || 1;
+  level = JSON.parse(localStorage.getItem('lvl')) || 1;
+
+  changeEXP(): void {
+    if (this.exp > 100){
+      this.exp = 0;
+      this.sp += 1;
+      localStorage.setItem('sp', JSON.stringify(this.sp));
+      this.level += 1;
+      localStorage.setItem('lvl', JSON.stringify(this.level));
+      document.documentElement.style.setProperty('--expPrct', `${this.exp}%`);
+    }
+    else{
+      this.exp += 30;
+      document.documentElement.style.setProperty('--expPrct', `${this.exp}%`);}
   }
-  
+
 
 
   bronie = [{id: 0, name: "miecz", str: 5, url:'../../../../assets/img/miecz.png'}, {id: 1, name: "kosa",str: 7, url:"../../../../assets/img/kosa.png"}];
@@ -154,11 +165,11 @@ export class BarsComponent implements OnInit {
 str = JSON.parse(localStorage.getItem('str')) || 0;
 def = JSON.parse(localStorage.getItem('def')) || 0;
 int = JSON.parse(localStorage.getItem('int')) || 0;
-skillpoint = 1;
+
 
 addstr() {
-  if(this.skillpoint > 0){
-  this.skillpoint--
+  if(this.sp > 0){
+  this.sp--
   this.str++;
   localStorage.setItem('str', JSON.stringify(this.str));}
   else
@@ -166,8 +177,8 @@ addstr() {
 }
 
 adddef() {
-  if(this.skillpoint > 0){
-  this.skillpoint--
+  if(this.sp > 0){
+  this.sp--
   this.def++;
   localStorage.setItem('def', JSON.stringify(this.def));}
   else
@@ -175,8 +186,8 @@ adddef() {
 }
 
 addint() {
-  if(this.skillpoint > 0){
-  this.skillpoint--
+  if(this.sp > 0){
+  this.sp--
   this.int++;
   localStorage.setItem('int', JSON.stringify(this.int));}
   else
@@ -187,6 +198,8 @@ reset(){
   localStorage.removeItem('str');
   localStorage.removeItem('int');
   localStorage.removeItem('def');
+  localStorage.removeItem('sp');
+  localStorage.removeItem('lvl');
   window.location.reload();
 }
 

@@ -3,7 +3,9 @@
 <div class="container">
     
 <div class="circle" id ="hp"></div>
-<div id ="lvl">LVL 1</div>
+<div id ="lvl"><div id="lel">LVL {{level}}</div>
+<button (click)="changeEXP()">Add</button>
+</div>
 <div class="circle" id ="exp"></div>
 <div class="staty">
 STATYSTYKI
@@ -18,8 +20,8 @@ STATYSTYKI
   <td>INT</td> <td>{{int}}</td>  <td><button (click)="addint()">Add</button></td>
   </tr>
   </table>
-  <button (click)="reset()">reset</button>
-  <p>Ilość punktów do rozdania: {{skillpoint}}</p>
+  <!-- <button (click)="reset()">reset</button> -->
+  <p>Ilość punktów do rozdania:{{sp}}</p>
 </div>
 <div class="eku">
   <div id="item1">

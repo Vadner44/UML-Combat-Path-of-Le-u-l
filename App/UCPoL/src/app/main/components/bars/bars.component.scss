@@ -1,5 +1,9 @@
 $hpPrct : var(--hpPrct);
 $hpPrctD : var(--hpPrctd);
+$expPrct : var(--expPrct);
+
+
+
 .container{
     border: black;
     border-style: solid;
@@ -15,15 +19,10 @@ $hpPrctD : var(--hpPrctd);
     background-color: dimgray;
     padding: 0;
     margin: 0;
-    background-repeat: no-repeat;
-    // background-image: url(../../../../assets/img/staty.png);
-    background-size: 90%;
 }
 
 .circle{
-    border: black;
-    border-style: solid;
-    border-width: 0px;
+    border: none;
     position: relative;
     width: 30%;
     min-width: 30%;
@@ -40,24 +39,27 @@ $hpPrctD : var(--hpPrctd);
 }
 #hp{
     float: left;
-    background-image: url(../../../../assets/img/szkielo.png), linear-gradient(to top, red $hpPrct  , black $hpPrctD);
+    background-image: url(../../../../assets/img/szkielo.png), linear-gradient(to top, red $hpPrct, gray $hpPrctD);
     background-size: cover;
     padding: 0;
 }
 #exp{
   float: left;
-  margin-left: 5%;
-  // background-color: rgb(204, 159, 11);
-  // background-image: url(../../../../assets/img/sklo.png), linear-gradient(to top, rgb(204, 159, 11) $expPrct);
+  background-image: url(../../../../assets/img/sklo.png), linear-gradient(to top, rgb(255, 217, 0) $expPrct, gray 0%);
   background-size: cover;
   padding: 0;
+  margin-left: 1.5%;
 }
 #lvl{
+  width: 21%;
+  margin-top: 1%;
   margin-left: 5%;
   color: black;
   float: left;
   font-size: 2vw;
 }
+
+
 
 .staty{
   text-align: center;
@@ -86,6 +88,8 @@ th, td {
 }
 p{
   float: left;
+  margin-left: 1%;
+  margin-bottom: 0;
 }
 .eku{
   margin-left: 4%;
