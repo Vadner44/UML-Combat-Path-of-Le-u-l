@@ -8,7 +8,7 @@ import { Component, OnInit, Input  } from '@angular/core';
 export class BarsComponent implements OnInit {
 
   hp = 100;
-  exp = 0;
+  exp = JSON.parse(localStorage.getItem('exp')) || 0;
   constructor() {
    }
 
@@ -43,6 +43,7 @@ export class BarsComponent implements OnInit {
     else{
       this.exp += 30;
       document.documentElement.style.setProperty('--expPrct', `${this.exp}%`);}
+    localStorage.setItem('exp', JSON.stringify(this.exp));
   }
 
 
