@@ -10,13 +10,14 @@
 <div class="hero"  ></div>
 <div id="spikes"></div>
 <div id="hppot"></div>
-<div id="npc" ></div>
+<div id="npc"  (click)="dial()"></div>
 <div id="boss" ></div>
-<!--
+
 <div id="dialog">
 <div *ngFor="let item of currDialog">{{item}}</div>
- <button (click)="dialogFn()"> Next</button>
-</div>-->
+ <button *ngIf="!end" (click)="dialogFn()"> Next</button>
+ <button *ngIf="end" (click)="zakonczDialog()">Zakończ</button>
+</div>
 
 <div id="battle">
 

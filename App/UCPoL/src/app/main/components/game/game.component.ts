@@ -4,7 +4,6 @@ import { BarsComponent } from '../bars/bars.component';
 import { I18nSelectPipe } from '@angular/common';
 import { LOGS } from '../logs/log';
 import {COLLIDERS1,COLLIDERS2,MAPS,colliderInt} from "../../../dev/colliders"
-import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -25,7 +24,7 @@ export class GameComponent implements OnInit {
     console.log(this.userX+" "+this.userY);
   }
  */
- bossphase = false;
+  bossphase = false;
   currmap = 0;
   colliders:colliderInt[]=JSON.parse(localStorage.getItem("map1"));
   logs = LOGS;
@@ -45,6 +44,7 @@ export class GameComponent implements OnInit {
   enemy1Beaten = false;
   won = false;
   lost = false;
+  end = false;
   constructor() {
 
    }
@@ -58,6 +58,8 @@ export class GameComponent implements OnInit {
     document.documentElement.style.setProperty('--vbattle', `hidden`);
     document.documentElement.style.setProperty('--vdial', `hidden`);
     document.documentElement.style.setProperty('--boss', `hidden`);
+
+
     if(localStorage.getItem('currmap') == null){
       this.currmap = 0;
     }
@@ -201,7 +203,14 @@ sleep(ms = 0) {
     this.colliders = JSON.parse(localStorage.getItem(this.colsMaps[mapID]));
     console.log(this.colliders);
 
-    if(mapID == 1){document.documentElement.style.setProperty('--vprops', `visible`);}
+    if(mapID == 1){
+      if(localStorage.getItem("didI?")==null){
+        localStorage.setItem("didI?","nie");
+      }
+      if(localStorage.getItem("didI?")=="nie"){
+      document.documentElement.style.setProperty('--vprops', `visible`);
+    }
+  }
     else{
       document.documentElement.style.setProperty('--vprops', `hidden`);
     }
@@ -230,10 +239,17 @@ sleep(ms = 0) {
       this.enemyHP += heal;
     }
   }
-  /*
+  
   dial():void{
+    if(localStorage.getItem("didI?")==null){
+      localStorage.setItem("didI?","nie");
+    }
+
+    if(localStorage.getItem("didI?")=="nie"){
     document.documentElement.style.setProperty('--vdial', `visible`);
     this.addLog("Rozmawiasz z: NPC",null);
+    }
+
   }
   line = 0;
    dialog = ["Spokojnie, nie mów nic. Twoja krtań nadal nie działa jak powinna.",
@@ -256,8 +272,22 @@ sleep(ms = 0) {
   dialogFn():void{
     this.line++;
     this.currDialog.push(this.dialog[this.line]);
-    console.log("aaa");
+    if(this.line == this.dialog.length){
+      this.end = true;
+    }
   }
-*/
+  zakonczDialog():void{
+    this.bars.add();
+    window.location.reload();
+    this.bars.changeEXP();
+    this.bars.changeEXP();
+    this.bars.changeEXP();
+    this.bars.changeEXP();
+    localStorage.setItem("didI?","tak");
+    this.addLog("Otrzymujesz 120 punktów doswiadczenia",null);
+    this.addLog("Nowe przedmioty w ewkipunku!",null);
+
+  }
+
 
 }

@@ -10,7 +10,7 @@
        <a class="nav-link" (click)="logout()">Wyloguj</a>
         <a class="nav-link" (click)="home()">Home </a>  
         <a class="nav-link" (click)="about()">O grze </a>
-        <a class="nav-link" (click)="dev()">Dev </a>
+        <a class="nav-link" *ngIf="currentUser.username=='Admin'" (click)="dev()">Dev </a>
 </nav>
 
 <!-- main app container 

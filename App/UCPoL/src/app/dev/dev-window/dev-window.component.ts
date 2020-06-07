@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-dev-window',
@@ -8,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 export class DevWindowComponent implements OnInit {
 
   constructor() { }
-
   ngOnInit(): void {
   }
 

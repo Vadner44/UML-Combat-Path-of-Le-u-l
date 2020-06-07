@@ -88,6 +88,19 @@ export class MapComponent implements OnInit {
    clearCollider():void{
     localStorage.removeItem(this.colsMaps[this.currMap]);
     localStorage.removeItem('currmap');
+    localStorage.removeItem("didI?");
+    localStorage.removeItem('images');
+    localStorage.removeItem('images2');
+    localStorage.removeItem('images3');
+    localStorage.removeItem('eq');
+    localStorage.removeItem('eq2');
+    localStorage.removeItem('eq3');
+    localStorage.removeItem('str');
+  localStorage.removeItem('int');
+  localStorage.removeItem('def');
+  localStorage.removeItem('sp');
+  localStorage.removeItem('lvl');
+  localStorage.removeItem('exp');
    }
 
 }

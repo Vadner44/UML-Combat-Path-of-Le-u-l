@@ -13,7 +13,6 @@ import './_content/app.less';
 export class AppComponent {
   title = 'UCPoL';
   currentUser: User;
-
     constructor(
         private router: Router,
         private authenticationService: AuthenticationService
