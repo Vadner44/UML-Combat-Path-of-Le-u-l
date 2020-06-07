@@ -144,6 +144,8 @@ sleep(ms = 0) {
     document.documentElement.style.setProperty('--hero', `hidden`);
     document.documentElement.style.setProperty('--boss', `hidden`);
     this.addLog("Rozpoczynasz walke!",null);
+
+
   }
   run():void{
     document.documentElement.style.setProperty('--vprops', `visible`);
@@ -161,6 +163,12 @@ sleep(ms = 0) {
     else{
       console.log("zabiles go :O");
       this.won = true;
+      this.bars.changeEXP();
+    this.bars.changeEXP();
+    this.bars.changeEXP();
+    this.bars.changeEXP();
+    this.bars.changeEXP();
+    this.bars.changeEXP();
       console.log(this.won);
 
     }
