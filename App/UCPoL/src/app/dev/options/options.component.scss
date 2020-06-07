@@ -1,6 +1,15 @@
 .container{
+    font-size: 2vw;
     height: 100%;
-    width: 30%;
+    width: 29%;
     float: right;
     background-color: wheat;
+    padding: 0;
+}
+
+button, input,#inputs, p{
+    float: right;
+    border: none;
+    padding: 0;
+    margin: 0;
 }

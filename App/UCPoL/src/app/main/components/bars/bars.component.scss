@@ -47,8 +47,8 @@ $hpPrctD : var(--hpPrctd);
 #exp{
   float: left;
   margin-left: 5%;
-  background-color: rgb(204, 159, 11);
-  background-image: url(../../../../assets/img/sklo.png);
+  // background-color: rgb(204, 159, 11);
+  // background-image: url(../../../../assets/img/sklo.png), linear-gradient(to top, rgb(204, 159, 11) $expPrct);
   background-size: cover;
   padding: 0;
 }
@@ -170,6 +170,7 @@ margin: 0;
 }
 
 #contentInside2{
+  float: left;
   margin-left: 37%;
   margin-top: 24%;
   width: 60%;
