@@ -8,6 +8,7 @@ import {COLLIDERS1,COLLIDERS2,MAPS} from '../colliders';
 })
 export class MapComponent implements OnInit {
   collidersarr = COLLIDERS1;
+  maps = MAPS;
   colsMaps = ['map1','map2','map3'];
   currMap = 0;
   collider = false;
@@ -19,6 +20,7 @@ export class MapComponent implements OnInit {
     this.userX = e.clientX;
     document.documentElement.style.setProperty('--setterY', `${e.clientY}px`);
     document.documentElement.style.setProperty('--setterX', `${e.clientX}px`);
+    
   }
   constructor() { }
 
@@ -26,6 +28,23 @@ export class MapComponent implements OnInit {
     document.documentElement.style.setProperty('--setterW', `16px`);
     document.documentElement.style.setProperty('--setterH', `16px`);
     document.documentElement.style.setProperty('--vis', `hidden`);
+    document.documentElement.style.setProperty('--map', `url(../../../assets/img/env/1.png)`);
+    document.documentElement.style.setProperty('--mapSize', `30%`);
+  }
+  next():void{
+   if(this.currMap == 2){
+     this.currMap = 0
+   }
+   else{
+     this.currMap++;
+   }
+   this.changemap(this.currMap);
+  }
+  changemap(mapID): void{
+    document.documentElement.style.setProperty('--map', `url(../../../assets/img/env/${this.maps[mapID].path})`);
+    document.documentElement.style.setProperty('--mapSize', `${this.maps[mapID].size}`);
+    console.log(mapID);
+    //this.colliders = JSON.parse(localStorage.getItem(this.colsMaps[mapID]));
   }
   sleep(ms = 0) {
     return new Promise(r => setTimeout(r, ms));
@@ -68,6 +87,7 @@ export class MapComponent implements OnInit {
    }
    clearCollider():void{
     localStorage.removeItem(this.colsMaps[this.currMap]);
+    localStorage.removeItem('currmap');
    }
 
 }

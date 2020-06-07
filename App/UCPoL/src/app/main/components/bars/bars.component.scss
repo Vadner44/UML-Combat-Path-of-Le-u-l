@@ -1,5 +1,7 @@
 $hpPrct : var(--hpPrct);
+$expPrct: var(--expPrct);
 $hpPrctD : var(--hpPrctd);
+$expPrctD : var(--expPrctd);
 .container{
     border: black;
     border-style: solid;
@@ -47,8 +49,8 @@ $hpPrctD : var(--hpPrctd);
 #exp{
   float: left;
   margin-left: 5%;
-  // background-color: rgb(204, 159, 11);
-  // background-image: url(../../../../assets/img/sklo.png), linear-gradient(to top, rgb(204, 159, 11) $expPrct);
+   background-color: rgb(204, 159, 11);
+   background-image: url(../../../../assets/img/sklo.png), linear-gradient(to top, rgb(204, 159, 11) $expPrct,black $expPrctD);
   background-size: cover;
   padding: 0;
 }

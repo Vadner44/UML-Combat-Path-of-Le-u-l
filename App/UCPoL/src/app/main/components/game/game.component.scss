@@ -2,10 +2,13 @@ $x : var(--x);
 $y : var(--y);
 $vprops : var(--vprops);
 $vbattle : var(--vbattle);
+$vdial : var(--vdial);
 $enemy1V : var(--venemy1);
 $currMap : var(--currMap);
 $mapV : var(--VMap);
 $mapSize : var(--mapSize);
+$hero : var(--hero);
+$boss : var(--boss);
 
 .container{
     margin-left: 1.5%;
@@ -49,7 +52,7 @@ div.ruch > input{
     position: absolute;
     left: $y;
     top: $x;
-    visibility: $vprops;
+    visibility: $hero;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -67,6 +70,34 @@ div.ruch > input{
     left:15%;
     top: 45%;
     visibility: hidden;
+}
+#npc{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-image: url(../../../../assets/img/npc_grabarz.png);
+   
+    position: absolute;
+    left:34%;
+    top: 40%;
+    width: 3.5%;
+    height: 10%;
+    visibility: $vprops;
+}
+#boss{
+background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-image: url(../../../../assets/img/boss.png);
+    position: absolute;
+    left:12.5%;
+    top: 17%;
+    width: 5%;
+    height: 16%;
+    visibility: $boss;;
+
 }
 #hppot{
     background-size: cover;
@@ -87,6 +118,19 @@ div.ruch > input{
     visibility: $vbattle;
     padding: 0;
     margin: 0;
+}
+#dialog{
+    margin-left: 40vw;
+    margin-top:20vh;
+    font-size: 12px;
+    width: 30%;
+    height: 50%;
+    background-color: khaki;;
+    background-size: cover;
+    z-index: 100;
+    visibility: $vdial;
+    padding: 0;
+    
 }
 #battle > h1{
     font-size: 2vw;
