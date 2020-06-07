@@ -36,7 +36,7 @@ export class GameComponent implements OnInit {
   //logs = new LogsComponent();
   attack: string = 'Otrzymałeś obrażenia : ';
   heal: string = 'Wyleczyłeś obrażenia : ';
-
+  colsMaps = ['map1','map2','map3'];
   enemyHP = 100;
 
   enemy1Beaten = false;
@@ -54,7 +54,7 @@ export class GameComponent implements OnInit {
     document.documentElement.style.setProperty('--vbattle', `hidden`);
     document.documentElement.style.setProperty('--currMap', `url(../../../../assets/img/env/1.png)`);
     
-    this.colliders = JSON.parse(localStorage.getItem("colliders"));
+    this.colliders = JSON.parse(localStorage.getItem("map1"));
     for(let pos of this.colliders){console.log(pos);}
 
   }
@@ -179,7 +179,7 @@ sleep(ms = 0) {
     this.y = this.maps[mapID].startY
     document.documentElement.style.setProperty('--y', `${this.y}px`);
     document.documentElement.style.setProperty('--x', `${this.x}px`);
-
+    this.colliders = JSON.parse(localStorage.getItem(this.colsMaps[mapID]));
     console.log(this.maps[mapID]);
   }
 

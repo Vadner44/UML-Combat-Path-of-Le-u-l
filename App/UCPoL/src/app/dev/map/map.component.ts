@@ -8,6 +8,8 @@ import {COLLIDERS1,COLLIDERS2,MAPS} from '../colliders';
 })
 export class MapComponent implements OnInit {
   collidersarr = COLLIDERS1;
+  colsMaps = ['map1','map2','map3'];
+  currMap = 0;
   collider = false;
   userY : number;
   userX : number;
@@ -62,10 +64,10 @@ export class MapComponent implements OnInit {
      }
    }
    saveCollider():void{
-    localStorage.setItem('colliders', JSON.stringify(this.collidersarr));
+    localStorage.setItem(this.colsMaps[this.currMap], JSON.stringify(this.collidersarr));
    }
    clearCollider():void{
-    localStorage.removeItem('colliders');
+    localStorage.removeItem(this.colsMaps[this.currMap]);
    }
 
 }

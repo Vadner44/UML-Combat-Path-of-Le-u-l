@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DevWindowComponent } from './dev-window/dev-window.component';
+import { MapComponent } from './map/map.component';
 
 
-const routes: Routes = [{ path: 'dev', component: DevWindowComponent}];
+const routes: Routes = [{ path: 'dev', component: MapComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
