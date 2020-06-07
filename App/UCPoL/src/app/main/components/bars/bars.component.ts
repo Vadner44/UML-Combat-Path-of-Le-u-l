@@ -204,6 +204,7 @@ reset(){
   localStorage.removeItem('def');
   localStorage.removeItem('sp');
   localStorage.removeItem('lvl');
+  localStorage.removeItem('exp');
   window.location.reload();
 }
 

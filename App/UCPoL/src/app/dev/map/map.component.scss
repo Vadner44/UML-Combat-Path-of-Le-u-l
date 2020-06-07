@@ -22,8 +22,18 @@ $setterVisibility : var(--vis);
     background-size: 30%;
     background-color: dimgray;
     padding: 0;
-
 }
+
+#black{
+    margin-left: -1.5%;
+    margin-top: 17.5%;
+    float: left;
+    width: 71%;
+    height: 30%;
+    background-color: black;
+    position: absolute;
+}
+
 button, input,#inputs, p{
     float: right;
     border: none;
