@@ -28,7 +28,7 @@ export class BarsComponent implements OnInit {
     console.log(this.hp);
   }
 
-  sp = JSON.parse(localStorage.getItem('sp')) || 1;
+  sp = JSON.parse(localStorage.getItem('sp')) || 0;
   level = JSON.parse(localStorage.getItem('lvl')) || 1;
 
   changeEXP(): void {
